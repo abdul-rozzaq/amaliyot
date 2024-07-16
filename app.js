@@ -1,8 +1,26 @@
 
-let numbers = [1, 2, 3,]
+
+class Car {
+    constructor(brand, model, color, year) {
+        this.brand = brand;
+        this.model = model;
+        this.color = color;
+        this.year = year;
+    }
+
+    start() {
+        console.log(`${this.brand} ${this.model} started`);
+    }
+}
 
 
-let numbers2 = [...numbers, 4, 5, 6];
+class BMW extends Car {
+    constructor(model, color, year) {
+        super('BMW', model, color, year);
+    }    
+}
 
 
-console.log(numbers2);
+let cs = new BMW('M3', 'black', 2023);
+
+cs.start()
