@@ -1,26 +1,17 @@
+// fetch('https://fakestoreapi.com/products')
+//             .then(res=>res.json())
+//             .then(json=>console.log(json))
 
 
-class Car {
-    constructor(brand, model, color, year) {
-        this.brand = brand;
-        this.model = model;
-        this.color = color;
-        this.year = year;
-    }
-
-    start() {
-        console.log(`${this.brand} ${this.model} started`);
-    }
+            
+async function get() {
+    let response = await fetch('https://fakestoreapi.com/products');
+    let jsonData = await response.json();
+        
+    console.log(jsonData);
 }
 
 
-class BMW extends Car {
-    constructor(model, color, year) {
-        super('BMW', model, color, year);
-    }    
-}
 
 
-let cs = new BMW('M3', 'black', 2023);
-
-cs.start()
+get()
