@@ -1,18 +1,8 @@
 
-let car = {
-    'type': 'Fiat',
-    'model': '500',
-    'color': 'white',
-    'info': function () { return `${this.type} ${this.model} ${this.color}`; }
-}
+let numbers = [1, 2, 3,]
 
 
-for (const key in car) {
-    let value = car[key];
-}
+let numbers2 = [...numbers, 4, 5, 6];
 
 
-for (const [key, value] of Object.entries(car)) {
-    console.log(key, value);
-}
-
+console.log(numbers2);
